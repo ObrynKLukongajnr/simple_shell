@@ -1,11 +1,13 @@
 #include "shell.h"
 
 /**
- * get_environ – this will return the str array copy of the environ
- * @info: the struct that contains potential arguments used to maintain
+ * get_environ - this will return the str array copy of the environ
+ * @info: the struct that contains potential args used to maintain
  * constant function prototype.
+ *
  * Return: Always 0
  */
+
 char **get_environ(info_t *info)
 {
 	if (!info->environ || info->env_changed)
@@ -18,12 +20,14 @@ char **get_environ(info_t *info)
 }
 
 /**
- * _unsetenv – this will remove the environ variable
- * @info: the struct that contains potential arguments used to maintain
- *  constant function prototype.
- *  Return: 1 on delete, 0 otherwise
+ * _unsetenv - this will remove the environ var
+ * @info: the struct that contains pontential args used to maintain
+ * constant function prototype.
  * @var: str environ var property
+ *
+ * Return: 1 on delete, 0 otherwise
  */
+
 int _unsetenv(info_t *info, char *var)
 {
 	list_t *node = info->env;
@@ -50,14 +54,16 @@ int _unsetenv(info_t *info, char *var)
 }
 
 /**
- * _setenv – this will initialize the new environ variable,
- *  or modify an existing one.
- * @info: the struct that contains potential arguments used to maintain
- *  constant function prototype.
+ * _setenv - this will initialize the new environ variable
+ * or modify an existing one.
+ * @info: the struct that conatains pontential args used to maintain
+ * constant function prototype.
  * @var: str environ var property
  * @value: str environ var value
- *  Return: Always 0
+ *
+ * Return: Always 0
  */
+
 int _setenv(info_t *info, char *var, char *value)
 {
 	char *buf = NULL;

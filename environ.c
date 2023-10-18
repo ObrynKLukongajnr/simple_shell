@@ -1,11 +1,13 @@
 #include "shell.h"
 
 /**
- * _myenv – this here will print the current environment
- * @info: The struct containing potential arguments that 
- *  are used to maintain constant function prototype.
+ * _myenv - this here will print the current environment
+ * @info: The struct containing args used to maintain
+ * constatant function prototype.
+ *
  * Return: Always 0
  */
+
 int _myenv(info_t *info)
 {
 	print_list_str(info->env);
@@ -13,12 +15,13 @@ int _myenv(info_t *info)
 }
 
 /**
- * _getenv – this will get the value of an environ variable
- * @info: the structure containing potential arguments that are used to maintain
- * @name: environment variable name
+ * _getenv - this will get the value of an environ variable
+ * @info: the struct containing potential args that used to maintain
+ * @name: environ var name
  *
  * Return: the value
  */
+
 char *_getenv(info_t *info, const char *name)
 {
 	list_t *node = info->env;

@@ -29,12 +29,14 @@ int _erratoi(char *s)
 }
 
 /**
- * print_error – the error message to be printed
+ * print_error - the error message to be printed
  * @info: this is the return info struct & parameter
  * @estr: the str that contains the specified error type
- * Return: 0 if no numbers in string, converted number otherwise
- *        -1 on error
+ *
+ * Return: 0 if no nums in str, converted num otherwise
+ *	-1 on error
  */
+
 void print_error(info_t *info, char *estr)
 {
 	_eputs(info->fname);
@@ -47,12 +49,13 @@ void print_error(info_t *info, char *estr)
 }
 
 /**
- * print_d – the function that prints decimal (integer) number (base 10)
+ * print_d - the function that prints decimal number (base 10)
  * @input: input
- * @fd: this is the filedescriptor to write
+ * @fd: this is the file descriptor to write
  *
- * Return: number of chars printed
+ * Return: num pf chars printed
  */
+
 int print_d(int input, int fd)
 {
 	int (*__putchar)(char) = _putchar;
@@ -86,13 +89,14 @@ int print_d(int input, int fd)
 }
 
 /**
- * convert_number – this is a converter function, which is a clone of itoa
+ * convert_number - this is a converter function which is a clone of itoa
  * @num: the num
  * @base: the base
- * @flags: the argument flags
+ * @flags: the arg flags
  *
- * Return: string
+ * Return: str
  */
+
 char *convert_number(long int num, int base, int flags)
 {
 	static char *array;
@@ -122,11 +126,13 @@ char *convert_number(long int num, int base, int flags)
 }
 
 /**
- * remove_comments – the function that replaces first instance of '#' with '\0'
+ * remove_comments - the function that replaces first
+ * instance of '#' with '\0'
  * @buf: the address of the str to be modified
  *
  * Return: Always 0;
  */
+
 void remove_comments(char *buf)
 {
 	int i;

@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * get_history_file – this will get the history file
- * @info: the parameter structure
+ * get_history_file - this will get the history file
+ * @info: the parameter struct
  *
- * Return: allocated string containing history file
+ * Return: allocated str containing history file.
  */
 
 char *get_history_file(info_t *info)
@@ -25,11 +25,12 @@ char *get_history_file(info_t *info)
 }
 
 /**
- * write_history – this will create a file, or append to an existing file
+ * write_history - this will crewate a file, or append to an existing file.
  * @info: the parameter struct
  *
  * Return: 1 on success, else -1
  */
+
 int write_history(info_t *info)
 {
 	ssize_t fd;
@@ -54,11 +55,12 @@ int write_history(info_t *info)
 }
 
 /**
- * read_history – this will read the history from the file
+ * read_history - this will read the history from the file
  * @info: parameter structure
  *
  * Return: histcount on success, 0 otherwise
  */
+
 int read_history(info_t *info)
 {
 	int i, last = 0, linecount = 0;
@@ -103,13 +105,14 @@ int read_history(info_t *info)
 }
 
 /**
- * build_history_list – this will add entry to a history linked list
- * @info: Struct containing the potential arguments used to maintain
- * @buf:  the buffer
- * @linecount: this is the history linecount, histcount
+ * build_history_list - this will add entry to a history linked list
+ * @info: struc containing the pontential args used to maintain
+ * @buf: the buf
+ * @linecount: this is the history linecount histcount
  *
  * Return: Always 0
  */
+
 int build_history_list(info_t *info, char *buf, int linecount)
 {
 	list_t *node = NULL;
@@ -124,11 +127,12 @@ int build_history_list(info_t *info, char *buf, int linecount)
 }
 
 /**
- * renumber_history – this will renumber history linked list after change
- * @info: the struct that contains potential arguments used to maintain
+ * renumber_history - this will renumber history linked list after change
+ * @info: the struct that contains pontential args used to maintain
  *
  * Return: the new histcount
  */
+
 int renumber_history(info_t *info)
 {
 	list_t *node = info->history;

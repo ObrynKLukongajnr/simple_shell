@@ -1,12 +1,14 @@
 #include "shell.h"
 
 /**
- * _myexit – this facilitates exits from the shell
- * @info: Struct containing arguments. That are used to maintain
- * constant function prototype.
+ * _myexit - this facilitates exits from the shell
+ * @info: struct containing args that are used to maintain
+ *	constant function prototype.
+ *
  * Return: exit with a given exit status
  * (0) if info.argv[0] != "exit"
  */
+
 int _myexit(info_t *info)
 {
 	int exitcheck;
@@ -30,11 +32,13 @@ int _myexit(info_t *info)
 }
 
 /**
- * _mycd – this will change current directory of the process
- * @info: The struc containing arguments that are used to maintain
+ * _mycd - this will change current directory of the process
+ * @info: The struct containing args that are used to maintain
  * constant function prototype.
+ *
  * Return: Always 0
  */
+
 int _mycd(info_t *info)
 {
 	char *s, *dir, buffer[1024];
@@ -80,11 +84,13 @@ int _mycd(info_t *info)
 }
 
 /**
- * _myhelp – this will change the current directory of the process
- * @info: The struct containing arguments to be used to maintain
- * constant function prototype.
+ * _myhelp - this will change the current directory of the process
+ * @info: The struct containing args used to maintain
+ *	constant function prototype.
+ *
  * Return: Always 0
  */
+
 int _myhelp(info_t *info)
 {
 	char **arg_array;
